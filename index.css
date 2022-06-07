@@ -1,0 +1,56 @@
+body{
+    background-color: aqua;
+}
+.wrapper{
+    display: flex;
+    width: 100%;
+    height: 50vh;
+    border: 1px solid blue;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+
+}
+.box{
+    display: block;
+    padding: 4rem;
+    margin: 10px;
+    background: red;
+    flex-grow: 1;
+    width: 0;
+}
+#box-1.box.item1{
+    flex-grow: 3;
+}
+
+#box-2{
+    order: -1;
+}
+#box-3{
+    order: 0;
+}
+
+.w1{
+    display: grid;
+    grid-template-columns: 3fr repeat(2, 1fr);
+}
+
+@keyframes colorchange {
+    from {
+        background: red;
+        width: 0;
+        height: 0;
+        /* transform: ; */
+    }
+    to {
+        background: blue;
+    }
+}
+#animate-box{
+    animation-name: colorchange;
+    animation-duration: 1s;
+    /* animation-timing-function: 3;
+     */
+     animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
